@@ -1,6 +1,6 @@
-# QRDemo_cgreen (UPS shipment demo)
+# QRDemo_cgreen (mail carrier shipment demo)
 
-Interactive **UPS-style routing** demo: a legacy “desktop shipping” layout vs a **modern** flow, with **LaunchDarkly** feature flags and a **user + hub/region** context for targeting. Built with **React** and **Vite**, static-host friendly for **GitHub Pages** (phone-friendly).
+Interactive **mail carrier** routing demo (the SDK context and examples use the token `mail_carrier` where a stable identifier is useful): a legacy “desktop shipping” layout vs a **modern** flow, with **LaunchDarkly** feature flags and a **user + hub/region** context for targeting. Built with **React** and **Vite**, static-host friendly for **GitHub Pages** (phone-friendly).
 
 ## Project structure
 
@@ -14,7 +14,7 @@ Interactive **UPS-style routing** demo: a legacy “desktop shipping” layout v
 | `src/context/FeatureFlagsProvider.jsx` | React integration: connect LD, `change` → refresh flags, `setDemoContext` for identify |
 | `src/lib/launchdarkly/FeatureFlagService.js` | Class wrapping the LD client: `connect`, `identify`, `getFlagsSnapshot`, `hubId` / `region` on context |
 | `src/lib/launchdarkly/demoContextTypes.js` | JSDoc typedefs for the demo context |
-| `src/components/legacy/` | NRGship-style form (`LegacyShipmentView`, `legacy-shipment.css`) |
+| `src/components/legacy/` | Classic ParcelForm-style form (`LegacyShipmentView`, `legacy-shipment.css`) |
 | `src/components/modern/` | Modern cards + route strip (`ModernShipmentView`, `modern-shipment.css`) |
 | `src/components/shared/` | Shared pieces (e.g. `RatePricingBlock`) |
 | `.env` | Local only (gitignored). Copy from `.env.example` |
@@ -116,4 +116,4 @@ npx gh-pages -d dist
 
 ---
 
-*Fork conceptually aligned with the [react_qr_app](https://github.com/cgreenld/react_qr_app) style demo, adapted for this UPS routing and LD context story.*
+*Fork conceptually aligned with the [react_qr_app](https://github.com/cgreenld/react_qr_app) style demo, adapted for a generic **mail carrier** routing story and LD context.*

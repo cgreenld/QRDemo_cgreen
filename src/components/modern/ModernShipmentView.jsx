@@ -3,7 +3,7 @@ import { RatePricingBlock } from '../shared/RatePricingBlock';
 import './modern-shipment.css';
 
 const ORIGIN = {
-  name: 'NRG Media, LLC',
+  name: 'Acme Operations, LLC',
   line2: '1234 Shipping Way, Suite 200',
   city: 'San Francisco, CA 94105',
 };
@@ -20,12 +20,12 @@ export function ModernShipmentView() {
   const demo = service.getDemoContext();
 
   return (
-    <div className="modern-app" role="application" aria-label="UPS shipment (demo)">
+    <div className="modern-app" role="application" aria-label="mail carrier shipment (demo)">
       <a className="modern-skip" href="#shipment-content">
         Skip to main content
       </a>
       <div className="modern-top" role="banner">
-        <span>UPS&reg; Shipment (demo)</span>
+        <span>mail carrier · shipment (demo)</span>
         <span className="modern-badge">
           <span className="modern-badge-dot" aria-hidden />
           <span>Live</span>
@@ -67,7 +67,7 @@ export function ModernShipmentView() {
           SAT
         </span>
         <span className="modern-addr--muted" style={{ marginLeft: 4, fontSize: 12 }}>
-          UPS Ground, est. 3 business days
+          Ground, est. 3 business days
         </span>
       </div>
 
@@ -76,7 +76,7 @@ export function ModernShipmentView() {
           <div className="modern-card modern-card--insights">
             <h2>Package status (new)</h2>
             <p className="modern-addr--muted" style={{ margin: 0 }}>
-              Shipment 1Z999AA1 tracking-style widget — <strong>only visible with pricing insights on.</strong>
+              Shipment <code>TRK-8829A-mail_carrier</code> style widget — <strong>only visible with pricing insights on.</strong>
             </p>
             <ul className="modern-timeline" aria-label="Stops and milestones">
               <li>
@@ -134,7 +134,7 @@ export function ModernShipmentView() {
         <article className="modern-card" aria-label="Service and package">
           <h2>Service &amp; package</h2>
           <div className="modern-svc">
-            <span>UPS Ground</span>
+            <span>Ground (standard)</span>
             <em>Delivery by end of day, 3 business days</em>
           </div>
           <div className="modern-dims">

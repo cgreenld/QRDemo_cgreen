@@ -5,7 +5,7 @@ import { basicLogger, initialize } from 'launchdarkly-js-client-sdk';
  * onto an LD user context. The UI should consume flags through {@link useFeatureFlags}.
  */
 export const FLAG_KEYS = {
-  /** When true, render the modern shipment UI; when false, legacy “NRGship” style. */
+  /** When true, render the modern shipment UI; when false, legacy “ParcelForm” style. */
   modernShipmentUi: 'release-modern-shipment-ui',
   /**
    * When true, show the rate / pricing insights block (breakdown, delivery callout).
@@ -138,11 +138,11 @@ export class FeatureFlagService {
 
 export function defaultDemoContext() {
   return {
-    userKey: 'ups-demo-sat',
+    userKey: 'mail-carrier-demo-sat',
     name: 'Demo operator',
     role: 'hub-clerk',
     hubId: 'hub-sat',
     region: 'US-SOUTH',
-    market: 'small-business',
+    market: 'mail_carrier',
   };
 }

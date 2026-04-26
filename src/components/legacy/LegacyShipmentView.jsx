@@ -4,8 +4,8 @@ import { RatePricingBlock } from '../shared/RatePricingBlock';
 import './legacy-shipment.css';
 
 const senderLines = {
-  name: 'NRG Media',
-  co: 'NRG Media, LLC',
+  name: 'Acme Co.',
+  co: 'Acme Operations, LLC',
   street: '1234 Shipping Way, Suite 200',
   city: 'San Francisco, CA 94105',
 };
@@ -19,7 +19,7 @@ export function LegacyShipmentView() {
   return (
     <div className="legacy-app">
       <div className="legacy-menubar" role="banner">
-        NRGship for UPS
+        ParcelForm (mail carrier)
       </div>
       <div className="legacy-toolbar" role="navigation" aria-label="Main actions">
         <div className="legacy-tb-item">
@@ -59,10 +59,10 @@ export function LegacyShipmentView() {
               <select
                 className="legacy-sel"
                 id={senderSelectId}
-                defaultValue="nrg"
+                defaultValue="default"
                 aria-label="Sender address"
               >
-                <option value="nrg">NRG Account Address</option>
+                <option value="default">Default account address</option>
                 <option value="other">Custom…</option>
               </select>
             </div>
@@ -101,7 +101,7 @@ export function LegacyShipmentView() {
                 </div>
                 <div className="legacy-row legacy-cb">
                   <input type="checkbox" defaultChecked id="qvn" readOnly />
-                  <label htmlFor="qvn">Send QuantumView&trade; Notifications</label>
+                  <label htmlFor="qvn">Send delivery notifications (email &amp; SMS)</label>
                 </div>
               </div>
               <div>
@@ -146,9 +146,9 @@ export function LegacyShipmentView() {
           <div className="legacy-block-content">
             <div className="legacy-pkg-svc">
               <div className="legacy-label-sm">Service</div>
-              <select className="legacy-sel" defaultValue="ground" style={{ minWidth: 200 }} aria-label="UPS service">
-                <option value="ground">UPS Ground</option>
-                <option value="red">UPS Next Day Air&reg;</option>
+              <select className="legacy-sel" defaultValue="ground" style={{ minWidth: 200 }} aria-label="Delivery service">
+                <option value="ground">Ground (standard)</option>
+                <option value="red">Express (next day)</option>
               </select>
               <div className="legacy-svc-hint">(3 business days, by end of day)</div>
             </div>
